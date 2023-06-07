@@ -4,30 +4,31 @@ server:
 spring:
   application:
     name: api-customer
-  datasource:
-    driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3307/checkAgro-dev
-    username: usr-checkAgro
-    password: pwd-checkAgro
-
-  jpa:
-    generate-ddl: true
-    hibernate:
-      enable_lazy_load_no_trans: true
-      event:
-        merge:
-          entity_copy_observer: allow
-      ddl-auto: update
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQL55Dialect
-        format_sql: true
-    show-sql: false
-    management:
-      endpoints:
-        web:
-          exposure:
-            include=serviceregistry,health,info
+  data:
+    mongodb:
+      username: usr-customer-mongo
+      password: pwd-customer-mongo
+      database: customer-dev-mongo
+      port: 27017
+      host: localhost
+  #jpa:
+    #generate-ddl: true
+    #hibernate:
+      #enable_lazy_load_no_trans: true
+      #event:
+        #merge:
+          #entity_copy_observer: allow
+      #ddl-auto: update
+    #properties:
+      #hibernate:
+        #dialect: org.hibernate.dialect.MySQL55Dialect
+        #format_sql: true
+    #show-sql: false
+    #management:
+      #endpoints:
+        #web:
+          #exposure:
+            #git include=serviceregistry,health,info
 urlCheck: http://localhost:8083
 
 eureka:
