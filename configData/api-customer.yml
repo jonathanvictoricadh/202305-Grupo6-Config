@@ -11,6 +11,10 @@ spring:
       database: customer-dev-mongo
       port: 27017
       host: localhost
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    show-sql: true
   #jpa:
     #generate-ddl: true
     #hibernate:
@@ -29,6 +33,10 @@ spring:
         #web:
           #exposure:
             #git include=serviceregistry,health,info
+info:
+  application:
+    name: api-customer
+
 urlCheck: http://localhost:8083
 
 eureka:
