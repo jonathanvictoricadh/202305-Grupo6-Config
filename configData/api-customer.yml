@@ -10,7 +10,7 @@ spring:
       password: pwd-customer-mongo
       database: customer-dev-mongo
       port: 27017
-      host: localhost
+      host: mongo-container
   jpa:
     hibernate.ddl-auto: update
     generate-ddl: true
