@@ -9,7 +9,7 @@ spring:
       username: usr-customer-mongo
       password: pwd-customer-mongo
       database: customer-dev-mongo
-      port: 27017
+      port: 27018
       host: mongo-container
   jpa:
     hibernate.ddl-auto: update
