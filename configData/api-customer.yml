@@ -4,17 +4,13 @@ server:
 spring:
   application:
     name: api-customer
-  data:
-    mongodb:
-      username: usr-customer-mongo
-      password: pwd-customer-mongo
-      database: customer-dev-mongo
-      port: 27017
-      host: localhost
-  jpa:
-    hibernate.ddl-auto: update
-    generate-ddl: true
-    show-sql: true
+  mongodb:
+    embedded:
+      version: 4.0.2
+    data:
+      mongodb:
+        database: test
+        port: 27017
   #jpa:
     #generate-ddl: true
     #hibernate:
