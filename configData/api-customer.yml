@@ -4,6 +4,8 @@ server:
 spring:
   application:
     name: api-customer
+  zipkin:
+    baseUrl: http://localhost:9411/  
 
   mongodb:
     embedded:
@@ -63,3 +65,5 @@ resilience4j:
         sliding-window-size: 5
         wait-duration-in-open-state: 1m
         failure-rate-threshold: 20
+
+  
