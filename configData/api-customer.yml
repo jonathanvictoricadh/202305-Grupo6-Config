@@ -4,6 +4,11 @@ server:
 spring:
   application:
     name: api-customer
+  rabbitmq:
+    username: guest
+    password: guest
+    host: localhost
+    port: 5672
   zipkin:
     baseUrl: http://localhost:9411/  
 
